@@ -1,6 +1,5 @@
 require 'sinatra'
-require 'httparty'
-require 'json'
+require_relative 'models/product.rb'
 
 get '/' do
   # HOME LANDING PAGE SHOWING BANNER PHOTO, TITLE, AND SUBTITLE
