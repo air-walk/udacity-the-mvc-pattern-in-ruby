@@ -3,87 +3,15 @@ require_relative 'models/product.rb'
 
 get '/' do
   # HOME LANDING PAGE SHOWING BANNER PHOTO, TITLE, AND SUBTITLE
-  erb "<!DOCTYPE html>
-  <html>
-  <head>
-    <title>Fomotograph | Home </title>
-    <link rel='stylesheet' type='text/css' href='<%= url('/style.css') %>'>
-    <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
-  </head>
-
-  <body>
-
-    <div id='container'>
-
-      <div id='header'>
-        <a href='/'><img src='/logo-black-text.png' alt='logo image' class='logo'/></a>
-        <a href='/team' class='nav'>Team</a>
-        <a href='/products' class='nav'>Products</a>
-      </div>
-
-      <div id='main'>
-        <img src='hero.png' alt='hero image' class='hero'/>
-        <img src='logo-white.png' alt='logo image' class='logo'/>
-        <h1 id='site-title'>Fomotograph</h1>
-        <h2 id='site-subtitle'>Custom travel photos on demand</h2>
-        <a class='button' href='/products'>Get Started</a>
-      </div>
-
-      <div id='footer'>
-        © Fomotograph
-      </div>
-
-    </div>
-
-  </body>
-  </html>"
+  @page_title = "Home"
+  erb :index
 end
 
 
 get '/team' do
   # TEAM PAGE LISTING THE TEAM MEMBERS
-  erb "<!DOCTYPE html>
-  <html>
-  <head>
-    <title>Fomotograph | The Team </title>
-    <link rel='stylesheet' type='text/css' href='<%= url('/style.css') %>'>
-    <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
-  </head>
-
-  <body>
-
-    <div id='container'>
-
-      <div id='header'>
-        <a href='/'><img src='/logo-black-text.png' alt='logo image' class='logo'/></a>
-        <a href='/team' class='nav'>Team</a>
-        <a href='/products' class='nav'>Products</a>
-      </div>
-
-      <div id='main'>
-        <h1>The Team</h1>
-        <div id='wrapper'>
-
-        <div class='staff'>
-          <img src='/founder.png' alt='founder' class='small-thumb' />
-          <p class='employee'>Hezekiah | Founder</p>
-          <p class='bio'>Hezekiah was drinking kombucha out of his favorite Hans
-          Solo coffee mug when he realized that he’s actually pretty decent at
-          Photoshop! In his spare time, he likes to immerse himself in virtual
-          reality while riding his hoverboard backwards.</p>
-        </div>
-
-        </div>
-      </div>
-
-      <div id='footer'>
-        © Fomotograph
-      </div>
-
-    </div>
-
-  </body>
-  </html>"
+  @page_title = "The Team"
+  erb :team
 end
 
 get '/products' do
