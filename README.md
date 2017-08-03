@@ -1,2 +1,2 @@
-# udacity-the-mvc-pattern-in-ruby
-The MVC Pattern in Ruby (from Udacity)
+# Udacity - The MVC Pattern in Ruby
+This repo contains solved exercises for Udacity's [The MVC Pattern in Ruby](https://www.udacity.com/course/the-mvc-pattern-in-ruby--ud270) course.
